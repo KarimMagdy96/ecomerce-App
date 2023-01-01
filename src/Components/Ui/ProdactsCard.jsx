@@ -14,7 +14,7 @@ export default function ProdactsCard({ item }) {
         </div>
         <div className="p-2 productInfo">
           <h3 className="productName">
-            <Link to="/shop/id">{item.productName}</Link>
+            <Link to={`/shop/${item.id}`}>{item.productName}</Link>
           </h3>
           <span className="">{item.category}</span>
         </div>

@@ -56,6 +56,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="bestSales">
+        <div className="container">
+          <div className="row"></div>
+        </div>
+      </section>
     </Helmate>
   );
 }
