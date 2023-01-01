@@ -3,6 +3,7 @@ import Helmet from "../../Components/Helmet/Helmet";
 import heroImg from "../../assets/images/hero-img.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import countImg from "../../assets/images/counter-timer-img.png";
 import Services from "../../Components/Services/Services";
 import ProductsList from "../../Components/Ui/ProductsList";
 import products from "../../assets/data/products";
@@ -67,6 +68,16 @@ export default function Home() {
               <h2 className="sectionTitle">Best Sales</h2>
             </div>
             <ProductsList data={bestSalesProducts} />
+          </div>
+        </div>
+      </section>
+      <section className="timerCounter">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6"></div>
+            <div className="col-lg-6 col-md-6">
+              <img src={countImg} alt="" />
+            </div>
           </div>
         </div>
       </section>
