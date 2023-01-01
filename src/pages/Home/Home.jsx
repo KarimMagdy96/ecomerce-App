@@ -7,6 +7,7 @@ import countImg from "../../assets/images/counter-timer-img.png";
 import Services from "../../Components/Services/Services";
 import ProductsList from "../../Components/Ui/ProductsList";
 import products from "../../assets/data/products";
+import Clock from "../../Components/Ui/Clock";
 export default function Home() {
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
@@ -74,9 +75,21 @@ export default function Home() {
       <section className="timerCounter">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-md-6"></div>
+            <div className="col-lg-6 col-md-6">
+              <div className="clockTopContent">
+                <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
+                <h3 className="text-white fs-5 mb-3">Quality ArmChair</h3>
+              </div>
+              <Clock />
+              <motion.button
+                whileTap={{ scale: 1.2 }}
+                className="buyBtn storeBtn"
+              >
+                <Link to="/shop">Visit Store</Link>
+              </motion.button>
+            </div>
             <div className="col-lg-6 col-md-6 text-end ">
-              <img src={countImg} alt="" />
+              <img src={countImg} alt="chair img" />
             </div>
           </div>
         </div>

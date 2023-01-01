@@ -259,3 +259,11 @@ h1 {
   height: 70% !important;
   object-fit: contain;
 }
+.storeBtn {
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.storeBtn a:hover {
+  color: var(--primary-color);
+}
