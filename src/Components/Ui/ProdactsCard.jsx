@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 export default function ProdactsCard({ item }) {
   return (
-    <div className="  col-lg-3  col-md-4 ">
+    <div className="  col-lg-3  col-md-4 mb-2 ">
       <div className="productItem ">
         <div className="productImg overflow-hidden">
           <motion.img

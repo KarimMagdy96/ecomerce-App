@@ -14,7 +14,11 @@ export default function Home() {
     const filteredTreadingProducts = products.filter(
       (item) => item.category === "chair"
     );
+    const filteredBestSalesProducts = products.filter(
+      (item) => item.category === "sofa"
+    );
     setTrendingProducts(filteredTreadingProducts);
+    setBestSalesProducts(filteredBestSalesProducts);
   }, []);
   return (
     <Helmet title={"Home"}>
@@ -62,6 +66,7 @@ export default function Home() {
             <div className="col-lg-12 text-center">
               <h2 className="sectionTitle">Best Sales</h2>
             </div>
+            <ProductsList data={bestSalesProducts} />
           </div>
         </div>
       </section>
