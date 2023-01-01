@@ -4,7 +4,7 @@ import heroImg from "../../assets/images/hero-img.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Services from "../../Components/Services/Services";
-
+import ProductsList from "../../Components/Ui/ProductsList";
 export default function Home() {
   const year = new Date().getFullYear();
   return (
@@ -43,6 +43,7 @@ export default function Home() {
             <div className="col-lg-12 text-center">
               <h2 className="sectionTitle">Trending Products</h2>
             </div>
+            <ProductsList />
           </div>
         </div>
       </section>
