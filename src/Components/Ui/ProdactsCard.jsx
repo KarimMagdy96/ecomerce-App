@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import prodactImg from "../../assets/images/arm-chair-01.jpg";
 export default function ProdactsCard() {
   return (
