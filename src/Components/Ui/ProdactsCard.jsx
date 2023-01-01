@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import prodactImg from "../../assets/images/arm-chair-01.jpg";
 import { Link } from "react-router-dom";
 export default function ProdactsCard({ item }) {
   return (
-    <div className="  col-lg-3  col-md-4">
+    <div className="  col-lg-3  col-md-4 ">
       <div className="productItem ">
         <div className="productImg overflow-hidden">
           <motion.img
