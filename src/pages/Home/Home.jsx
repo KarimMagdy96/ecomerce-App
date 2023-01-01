@@ -8,12 +8,13 @@ import ProductsList from "../../Components/Ui/ProductsList";
 import products from "../../assets/data/products";
 export default function Home() {
   const [trendingProducts, setTrendingProducts] = useState([]);
+  const [bestSalesProducts, setBestSalesProducts] = useState([]);
   const year = new Date().getFullYear();
   useEffect(() => {
-    const filteredProducts = products.filter(
+    const filteredTreadingProducts = products.filter(
       (item) => item.category === "chair"
     );
-    setTrendingProducts(filteredProducts);
+    setTrendingProducts(filteredTreadingProducts);
   }, []);
   return (
     <Helmet title={"Home"}>
