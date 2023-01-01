@@ -1,12 +1,11 @@
 import React from "react";
 import ProdactsCard from "./ProdactsCard";
-export default function ProductsList() {
+export default function ProductsList({ data }) {
   return (
     <>
-      <ProdactsCard />
-      <ProdactsCard />
-      <ProdactsCard />
-      <ProdactsCard />
+      {data.map((item, i) => (
+        <ProdactsCard key={i} item={item} />
+      ))}
     </>
   );
 }
