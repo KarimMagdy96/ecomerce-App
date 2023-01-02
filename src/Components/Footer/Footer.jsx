@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="footer ">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-md-5">
               <div className="logo">
                 <div className="logoName">
                   <h1 className="text-white footerLinksTitle">KMarket</h1>
@@ -20,7 +20,7 @@ export default function Footer() {
                 quibusdam natus animi adipisci?
               </p>
             </div>
-            <div className="col-lg-3 text-white">
+            <div className="col-lg-3 col-md-4 text-white">
               <div className="footerLinks">
                 <h4 className="footerLinksTitle">Top Categories</h4>
                 <ul className=" p-0 text-muted">
@@ -39,7 +39,7 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-2 ">
+            <div className="col-lg-2 col-md-3">
               <h4 className="footerLinksTitle text-white">Useful Links</h4>
               <ul className=" p-0 text-muted">
                 <li className="mb-2">

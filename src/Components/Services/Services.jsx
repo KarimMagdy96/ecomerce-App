@@ -8,7 +8,7 @@ export default function Services() {
         <div className="container">
           <div className="row">
             {serviceData.map((item, i) => (
-              <div key={i} className="col-md-4 col-lg-3">
+              <div key={i} className="col-md-6 col-lg-3 p-1">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className="servicesItem"

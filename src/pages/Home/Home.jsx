@@ -87,10 +87,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="timerCounter overflow-hidden">
+      <section className="timerCounter ">
         <div className="container">
           <div className="row  ">
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-12 clockcontainer">
               <div className="clockTopContent">
                 <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
                 <h3 className="text-white fs-5 mb-3">Quality ArmChair</h3>
@@ -103,7 +103,7 @@ export default function Home() {
                 <Link to="/shop">Visit Store</Link>
               </motion.button>
             </div>
-            <div className="col-lg-6 col-md-6 text-end ">
+            <div className="col-lg-6 col-md-12 text-end counterImg">
               <img src={countImg} alt="chair img" />
             </div>
           </div>
