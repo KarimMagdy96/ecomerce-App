@@ -81,7 +81,8 @@ header {
   column-gap: 8px;
 }
 
-nav img {
+nav img,
+footer img {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -266,4 +267,19 @@ h1 {
 }
 .storeBtn a:hover {
   color: var(--primary-color);
+}
+/* footer */
+.footer {
+  padding-top: 60px;
+
+  background-color: var(--primary-color);
+}
+.footerText {
+  line-height: 30px;
+}
+.footer ul li a:hover {
+  color: #fff;
+}
+.footer ul {
+  margin-top: 1.5rem !important;
 }
