@@ -13,8 +13,26 @@ const navLink = [
   { path: "cart", display: "Cart" },
 ];
 export default function Header() {
+  const headerRef = useRef(null);
+  const stickyHeaderFunction = () => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("sticyHeader");
+      } else {
+        headerRef.current.classList.remove("sticyHeader");
+      }
+    });
+  };
+  useEffect(() => {
+    stickyHeaderFunction();
+    return () => window.removeEventListener("scroll", stickyHeaderFunction);
+  });
+
   return (
-    <header>
+    <header ref={headerRef}>
       <nav>
         <div className="container">
           <div className="row">
