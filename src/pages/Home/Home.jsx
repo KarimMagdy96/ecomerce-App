@@ -11,6 +11,9 @@ import Clock from "../../Components/Ui/Clock";
 export default function Home() {
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
+  const [mobilProducts, setMobilProducts] = useState([]);
+  const [wirelessProducts, setWirelessProducts] = useState([]);
+  const [popularProducts, setPopularProducts] = useState([]);
   const year = new Date().getFullYear();
   useEffect(() => {
     const filteredTreadingProducts = products.filter(
@@ -19,8 +22,20 @@ export default function Home() {
     const filteredBestSalesProducts = products.filter(
       (item) => item.category === "sofa"
     );
+    const filteredMobileProducts = products.filter(
+      (item) => item.category === "mobile"
+    );
+    const filteredWirelessProducts = products.filter(
+      (item) => item.category === "wireless"
+    );
+    const filteredPopularProducts = products.filter(
+      (item) => item.category === "watch"
+    );
     setTrendingProducts(filteredTreadingProducts);
     setBestSalesProducts(filteredBestSalesProducts);
+    setMobilProducts(filteredMobileProducts);
+    setWirelessProducts(filteredWirelessProducts);
+    setPopularProducts(filteredPopularProducts);
   }, []);
   return (
     <Helmet title={"Home"}>
@@ -97,9 +112,21 @@ export default function Home() {
       <section className="newArrivals">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12 text-center">
+            <div className="col-lg-12 text-center mb-5">
               <h2 className="sectionTitle">New Arrivals</h2>
             </div>
+            <ProductsList data={mobilProducts} />
+            <ProductsList data={wirelessProducts} />
+          </div>
+        </div>
+      </section>
+      <section className="popularCategory">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center mb-5">
+              <h2 className="sectionTitle">Popular in Category</h2>
+            </div>
+            <ProductsList data={popularProducts} />
           </div>
         </div>
       </section>
