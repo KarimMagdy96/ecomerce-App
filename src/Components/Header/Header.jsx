@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "../../assets/images/eco-logo.png";
 import { NavLink } from "react-router-dom";
 import userIcon from "../../assets/images/user-icon.png";
 import { motion } from "framer-motion";
+
 const navLink = [
   {
     path: "home",
