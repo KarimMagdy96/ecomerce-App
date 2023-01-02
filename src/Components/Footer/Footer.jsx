@@ -59,13 +59,13 @@ export default function Footer() {
             <div className="col-lg-3 text-white">
               <h4 className="footerLinksTitle">Content</h4>
               <ul className=" p-0 text-muted">
-                <li className="mb-2">
+                <li className="mb-2 d-flex justify-content-start align-items-center gap-2">
                   <i class="ri-map-pin-line"></i> <span>123 Giza, Haram</span>
                 </li>
-                <li className="mb-2">
+                <li className="mb-2 d-flex justify-content-start align-items-center gap-2">
                   <i class="ri-phone-line"></i> <span>01097220712</span>
                 </li>
-                <li className="mb-2">
+                <li className="mb-2 d-flex justify-content-start align-items-center gap-2">
                   <i class="ri-mail-line"></i>{" "}
                   <span>karimmagdy096@gmail.com</span>
                 </li>
