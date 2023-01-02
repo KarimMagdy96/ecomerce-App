@@ -62,16 +62,18 @@ export default function Header() {
                   <i class="ri-shopping-bag-line"></i>
                   <span className="badge">1</span>
                 </span>
-                <motion.img
-                  whileTap={{ scale: 1.2 }}
-                  src={userIcon}
-                  alt="user icon"
-                />
-              </div>
-              <div className="mobilMenu">
                 <span>
-                  <i class="ri-menu-line"></i>
+                  <motion.img
+                    whileTap={{ scale: 1.2 }}
+                    src={userIcon}
+                    alt="user icon"
+                  />
                 </span>
+                <div className="mobilMenu">
+                  <span>
+                    <i class="ri-menu-line"></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
