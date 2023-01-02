@@ -294,7 +294,21 @@ h1 {
 .footer .footerLinksTitle {
   margin: 0.75rem 0rem 0.75rem 0rem !important;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .heroContent h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+  .heroContent h2 {
+    font-size: 1.6rem;
+  }
+  .heroContent p {
+    font-size: 0.9rem;
+  }
+  .buyBtn a {
+    font-size: 0.9rem;
+  }
   .navigation {
     position: fixed;
     top: 0;
@@ -345,5 +359,11 @@ h1 {
     width: 100%;
     height: 100%;
     line-height: 60px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .heroContent {
+    padding-top: 0;
+    margin-bottom: 40px;
   }
 }

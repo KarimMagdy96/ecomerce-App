@@ -14,6 +14,7 @@ const navLink = [
 ];
 export default function Header() {
   const headerRef = useRef(null);
+  const menuRef = useRef(null);
   const stickyHeaderFunction = () => {
     window.addEventListener("scroll", () => {
       if (
@@ -30,7 +31,9 @@ export default function Header() {
     stickyHeaderFunction();
     return () => window.removeEventListener("scroll", stickyHeaderFunction);
   });
-
+  const menuToggle = () => {
+    menuRef.current.classList.toggle("activeMenu");
+  };
   return (
     <header ref={headerRef}>
       <nav>
@@ -43,8 +46,8 @@ export default function Header() {
                   <h1>KMarket</h1>
                 </div>
               </div>
-
-              <div className="navigation">
+              {console.log(menuRef)}
+              <div className="navigation" ref={menuRef} onClick={menuToggle}>
                 <ul className="menu">
                   {navLink.map((link, i) => (
                     <li key={i}>
@@ -70,7 +73,7 @@ export default function Header() {
                   />
                 </span>
                 <div className="mobilMenu">
-                  <span>
+                  <span onClick={menuToggle}>
                     <i class="ri-menu-line"></i>
                   </span>
                 </div>
