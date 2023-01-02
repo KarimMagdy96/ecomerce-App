@@ -72,9 +72,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="timerCounter">
+      <section className="timerCounter overflow-hidden">
         <div className="container">
-          <div className="row">
+          <div className="row  ">
             <div className="col-lg-6 col-md-6">
               <div className="clockTopContent">
                 <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
@@ -90,6 +90,15 @@ export default function Home() {
             </div>
             <div className="col-lg-6 col-md-6 text-end ">
               <img src={countImg} alt="chair img" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="newArrivals">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2 className="sectionTitle">New Arrivals</h2>
             </div>
           </div>
         </div>
