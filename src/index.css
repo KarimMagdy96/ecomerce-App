@@ -410,4 +410,44 @@ h1 {
     padding-top: 0;
     margin-bottom: 40px;
   }
+  .mobilMenu {
+    display: block;
+  }
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.53);
+    z-index: 9999;
+    display: none;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .activeMenu {
+    display: block;
+  }
+  .counterImg {
+    display: none;
+  }
+  .heroC .clockTopContent {
+    text-align: center;
+  }
+  .colorWrapper {
+    justify-content: center;
+  }
+  .clockcontainer {
+    text-align: center;
+  }
 }
