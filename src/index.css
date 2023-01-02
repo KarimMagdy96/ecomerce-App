@@ -290,6 +290,6 @@ h1 {
 .footer ul li a:hover {
   color: #fff;
 }
-.footer ul {
-  margin-top: 1.5rem !important;
+.footer .footerLinksTitle {
+  margin: 0.75rem 0rem 0.75rem 0rem !important;
 }

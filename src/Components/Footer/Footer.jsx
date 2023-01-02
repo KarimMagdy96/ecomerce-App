@@ -11,10 +11,10 @@ export default function Footer() {
             <div className="col-lg-4">
               <div className="logo">
                 <div className="logoName">
-                  <h1 className="text-white">KMarket</h1>
+                  <h1 className="text-white footerLinksTitle">KMarket</h1>
                 </div>
               </div>
-              <p className="footerText mt-4">
+              <p className="footerText">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Inventore mollitia delectus dignissimos ratione id aliquam nisi
                 quibusdam natus animi adipisci?
