@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { CartAction } from "../../redux/slice/CartSlice";
-
+import { toast } from "react-toastify";
 export default function ProdactsCard({ item }) {
   const dispatch = useDispatch();
   const addTOCart = () => {
@@ -15,7 +15,7 @@ export default function ProdactsCard({ item }) {
         image: item.imgUrl,
       })
     );
-    alert("add secussfily ");
+    toast.success("Product Added Successfully");
   };
 
   return (
