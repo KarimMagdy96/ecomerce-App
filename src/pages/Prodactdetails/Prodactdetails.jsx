@@ -102,7 +102,7 @@ export default function Prodactdetails() {
                           <div className="formGroup">
                             <input type="text" placeholder="Enter name" />
                           </div>
-                          <div className="formGroup">
+                          <div className="formGroup d-flex align-items-center gap-5">
                             <span>
                               1<i class="ri-star-fill"></i>
                             </span>
@@ -129,6 +129,7 @@ export default function Prodactdetails() {
                               placeholder="Review Massage"
                             />
                           </div>
+                          <button className="buyBtn">Submit</button>
                         </form>
                       </div>
                     </div>
