@@ -41,6 +41,13 @@ export default function Shop() {
       setProductsData(products);
     }
   };
+  const handelSearch = (e) => {
+    const searchTearm = e.target.value;
+    const searchedProdacts = products.filter((item) =>
+      item.productName.toLowerCase().includes(searchTearm.toLowerCase())
+    );
+    setProductsData(searchedProdacts);
+  };
   return (
     <Helmet title="shop">
       <CommonSection title="Products" />
@@ -73,7 +80,11 @@ export default function Shop() {
             </div>
             <div className="col-lg-6 col-md-6  ">
               <div className="searchBox ">
-                <input type="text" placeholder="Search..." />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  onChange={handelSearch}
+                />
                 <i class="ri-search-line"></i>
               </div>
             </div>
@@ -83,7 +94,9 @@ export default function Shop() {
       <div className="container pb-3 pt-0">
         <div className="row">
           {productsData.length === 0 ? (
-            <div className="w-100 vh-100">NO Products Found !</div>
+            <div className="w-100 vh-100 text-center fw-bold fs-1">
+              NO Products Found !
+            </div>
           ) : (
             <ProductsList data={productsData} />
           )}
