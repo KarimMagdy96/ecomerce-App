@@ -88,14 +88,49 @@ export default function Prodactdetails() {
                   <div className="productReview mt-5">
                     <div className="reviewWrapper">
                       <ul>
-                        {reviews.map((item, i) => (
-                          <li key={i}>
+                        {reviews?.map((item, i) => (
+                          <li key={i} className="mb-4">
+                            <h6>Karim</h6>
                             <span>{item.rating} (rating)</span>
                             <p>{item.text}</p>
                           </li>
                         ))}
                       </ul>
-                      <div className="reviewForm"></div>
+                      <div className="reviewForm ">
+                        <h4>Leave Your Experience</h4>
+                        <form action="">
+                          <div className="formGroup">
+                            <input type="text" placeholder="Enter name" />
+                          </div>
+                          <div className="formGroup">
+                            <span>
+                              1<i class="ri-star-fill"></i>
+                            </span>
+                            <span>
+                              2<i class="ri-star-fill"></i>
+                            </span>
+                            <span>
+                              3<i class="ri-star-fill"></i>
+                            </span>
+                            <span>
+                              4<i class="ri-star-fill"></i>
+                            </span>
+                            <span>
+                              5<i class="ri-star-fill"></i>
+                            </span>
+                            <span>
+                              6<i class="ri-star-fill"></i>
+                            </span>
+                          </div>
+                          <div className="formGroup">
+                            <textarea
+                              rows="4"
+                              type="text"
+                              placeholder="Review Massage"
+                            />
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 )}
