@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function CommonSection() {
+export default function CommonSection({ title }) {
   return (
     <>
       <section className="commonSection">
         <div className="container text-center">
-          <h1>{title}</h1>
+          <h5 className="h1">{title}</h5>
         </div>
       </section>
     </>

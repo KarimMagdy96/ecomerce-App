@@ -321,6 +321,21 @@ h1 {
     font-size: 0.9rem !important;
   }
 }
+/* commonSection */
+.commonSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.547), rgba(0, 0, 0, 0.547)),
+    url("./assets/images//common.jpg") no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0px;
+}
+.commonSection h5 {
+  color: #fff;
+  font-weight: 600;
+}
 @media only screen and (max-width: 768px) and (min-width: 576px) {
   .heroContent h2 {
     font-size: 1.6rem;
