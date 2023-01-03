@@ -398,6 +398,17 @@ h1 {
   color: var(--primary-color);
   font-weight: 500;
   font-size: 1rem;
+  cursor: pointer;
+}
+.tabContent p {
+  line-height: 30px;
+}
+.reviewWrapper ul li span {
+  color: coral;
+  font-weight: 600;
+}
+.reviewWrapper ul li p {
+  margin-top: 10px;
 }
 /* *************** */
 @media only screen and (max-width: 768px) and (min-width: 576px) {

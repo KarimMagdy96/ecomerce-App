@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "../../assets/data/products";
 import Helmet from "../../Components/Helmet/Helmet";
 import CommonSection from "../../Components/Ui/CommonSection";
 export default function Prodactdetails() {
+  const [tab, setTab] = useState("desc");
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
   const {
@@ -13,7 +14,7 @@ export default function Prodactdetails() {
     price,
     avgRating,
     reviews,
-    discription,
+    description,
     shortDesc,
   } = product;
   return (
@@ -66,12 +67,37 @@ export default function Prodactdetails() {
             <div className="row">
               <div className="col-lg-12">
                 <div className="tabWraaper d-flex align-items-center gap-5">
-                  <h6>Description</h6>
-                  <h6>Reviews ({reviews.length})</h6>
+                  <h6
+                    className={`${tab === "desc" ? "activeTab" : ""}`}
+                    onClick={() => setTab("desc")}
+                  >
+                    Description
+                  </h6>
+                  <h6
+                    className={`${tab === "rev" ? "activeTab" : ""}`}
+                    onClick={() => setTab("rev")}
+                  >
+                    Reviews ({reviews.length})
+                  </h6>
                 </div>
-                <div className="tabContent mt-5">
-                  <p>{discription}</p>
-                </div>
+                {tab === "desc" ? (
+                  <div className="tabContent mt-5">
+                    <p>{description}</p>
+                  </div>
+                ) : (
+                  <div className="productReview mt-5">
+                    <div className="reviewWrapper">
+                      <ul>
+                        {reviews.map((item, i) => (
+                          <li key={i}>
+                            <span>{item.rating} (rating)</span>
+                            <p>{item.text}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
