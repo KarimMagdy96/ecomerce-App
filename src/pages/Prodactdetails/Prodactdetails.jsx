@@ -7,19 +7,51 @@ import CommonSection from "../../Components/Ui/CommonSection";
 export default function Prodactdetails() {
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
-  const { imgUrl, ProdactName, price, avgRating, review, discription } =
-    product;
+  const {
+    imgUrl,
+    productName,
+    price,
+    avgRating,
+    review,
+    discription,
+    shortDesc,
+  } = product;
   return (
     <>
       <Helmet title="Products Details">
         <CommonSection />
-        <section className="pt-0">
+        <section className="pt-5">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
                 <img src={imgUrl} alt="product" />
               </div>
-              <div className="col-lg-6"></div>
+              <div className="col-lg-6">
+                <div className="prodauctDetailes">
+                  <h2>{productName}</h2>
+                  <div className="prodactRating">
+                    <span>
+                      <i class="ri-star-fill"></i>
+                    </span>
+                    <span>
+                      <i class="ri-star-fill"></i>
+                    </span>
+                    <span>
+                      <i class="ri-star-fill"></i>
+                    </span>
+                    <span>
+                      <i class="ri-star-fill"></i>
+                    </span>
+                    <span>
+                      <i class="ri-star-half-line"></i>
+                    </span>
+                  </div>
+                  <p>({avgRating} Rating)</p>
+                  <span>{price} $</span>
+                  <p>{shortDesc}</p>
+                  <button className="buyBtn">Add To Cart</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
