@@ -29,26 +29,30 @@ export default function Prodactdetails() {
               <div className="col-lg-6">
                 <div className="prodauctDetailes">
                   <h2>{productName}</h2>
-                  <div className="prodactRating">
-                    <span>
-                      <i class="ri-star-fill"></i>
-                    </span>
-                    <span>
-                      <i class="ri-star-fill"></i>
-                    </span>
-                    <span>
-                      <i class="ri-star-fill"></i>
-                    </span>
-                    <span>
-                      <i class="ri-star-fill"></i>
-                    </span>
-                    <span>
-                      <i class="ri-star-half-line"></i>
-                    </span>
+                  <div className="prodactRating d-flex align-items-center gap-5 mb-3">
+                    <div>
+                      <span>
+                        <i class="ri-star-fill"></i>
+                      </span>
+                      <span>
+                        <i class="ri-star-fill"></i>
+                      </span>
+                      <span>
+                        <i class="ri-star-fill"></i>
+                      </span>
+                      <span>
+                        <i class="ri-star-fill"></i>
+                      </span>
+                      <span>
+                        <i class="ri-star-half-line"></i>
+                      </span>
+                    </div>
+                    <p>
+                      (<span>{avgRating}</span> Rating)
+                    </p>
                   </div>
-                  <p>({avgRating} Rating)</p>
-                  <span>{price} $</span>
-                  <p>{shortDesc}</p>
+                  <span className="productPrice">${price}</span>
+                  <p className="mt-3">{shortDesc}</p>
                   <button className="buyBtn">Add To Cart</button>
                 </div>
               </div>

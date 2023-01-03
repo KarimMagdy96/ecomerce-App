@@ -371,6 +371,27 @@ h1 {
   color: #fff;
   font-weight: 600;
 }
+
+/* Products Details */
+.prodauctDetailes {
+  margin-top: 50px;
+}
+.prodauctDetailes h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.prodactRating span i {
+  color: coral;
+}
+.prodactRating p span {
+  color: coral;
+  font-weight: 500;
+}
+.productPrice {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+/* *************** */
 @media only screen and (max-width: 768px) and (min-width: 576px) {
   .heroContent h2 {
     font-size: 1.6rem;
