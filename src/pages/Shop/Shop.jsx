@@ -3,6 +3,12 @@ import CommonSection from "../../Components/Ui/CommonSection";
 import products from "../../assets/data/products";
 import Helmet from "../../Components/Helmet/Helmet";
 export default function Shop() {
+  const [productsData, setProductsData] = useState(products);
+  const handelFilter = (e) => {
+    const filterValue = e.target.value;
+    if (filterValue === "sofa") {
+    }
+  };
   return (
     <Helmet title="shop">
       <CommonSection title="Products" />
