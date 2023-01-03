@@ -95,6 +95,7 @@ export default function Prodactdetails() {
                           </li>
                         ))}
                       </ul>
+                      <div className="reviewForm"></div>
                     </div>
                   </div>
                 )}
