@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import CommonSection from "../../Components/Ui/CommonSection";
-
+import products from "../../assets/data/products";
 import Helmet from "../../Components/Helmet/Helmet";
 export default function Shop() {
   return (
@@ -21,7 +21,7 @@ export default function Shop() {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3">
+            <div className="col-lg-3 col-md-3 ">
               <div className="filterWidget">
                 <select>
                   <option value="sofa">Sort By </option>
@@ -30,12 +30,10 @@ export default function Shop() {
                 </select>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6">
-              <div className="searchBox">
-                <input type="text" placeholder="Search...." />
-                <span>
-                  <i class="ri-search-line"></i>
-                </span>
+            <div className="col-lg-6 col-md-6  ">
+              <div className="searchBox ">
+                <input type="text" placeholder="Search..." />
+                <i class="ri-search-line"></i>
               </div>
             </div>
           </div>

@@ -340,6 +340,33 @@ h1 {
   background-color: var(--primary-color);
   color: #fff;
 }
+.filterWidget select:focus {
+  outline: none !important;
+}
+.filterWidget select option {
+  font-size: 0.9rem;
+}
+.searchBox {
+  width: 100%;
+  display: flex;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  align-items: center;
+  padding-right: 12px;
+  padding-left: 2px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+}
+.searchBox span {
+  color: var(--primary-color);
+}
+
 .commonSection h5 {
   color: #fff;
   font-weight: 600;
