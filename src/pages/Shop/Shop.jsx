@@ -22,11 +22,13 @@ export default function Shop() {
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <select>
-                <option value="sofa">Sort By </option>
-                <option value="ascending">Ascending</option>
-                <option value="Descending">Descending</option>
-              </select>
+              <div className="filterWidget">
+                <select>
+                  <option value="sofa">Sort By </option>
+                  <option value="ascending">Ascending</option>
+                  <option value="Descending">Descending</option>
+                </select>
+              </div>
             </div>
             <div className="col-lg-6 col-md-6">
               <div className="searchBox">
