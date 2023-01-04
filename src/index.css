@@ -439,7 +439,13 @@ h1 {
   align-items: center;
   column-gap: 5px;
   color: coral;
+  cursor: pointer;
   font-weight: 600;
+}
+.relatedTittle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 30px;
 }
 /* *************** */
 @media only screen and (max-width: 768px) and (min-width: 576px) {

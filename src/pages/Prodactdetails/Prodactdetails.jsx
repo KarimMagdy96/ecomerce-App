@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "../../assets/data/products";
 import Helmet from "../../Components/Helmet/Helmet";
+import ProductsList from "../../Components/Ui/ProductsList";
 import CommonSection from "../../Components/Ui/CommonSection";
 export default function Prodactdetails() {
   const [tab, setTab] = useState("desc");
+  const [rate, setrate] = useState(null);
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
+
   const {
     imgUrl,
     productName,
@@ -16,7 +19,9 @@ export default function Prodactdetails() {
     reviews,
     description,
     shortDesc,
+    category,
   } = product;
+  const ratedProdacts = products.filter((item) => item.category === category);
   return (
     <>
       <Helmet title={productName}>
@@ -52,7 +57,10 @@ export default function Prodactdetails() {
                       (<span>{avgRating}</span> Rating)
                     </p>
                   </div>
-                  <span className="productPrice">${price}</span>
+                  <div className="d-flex justify-content-start  gap-5 align-items-center">
+                    <span className="productPrice">${price}</span>
+                    <span>Category: {category}</span>
+                  </div>
                   <p className="mt-3">{shortDesc}</p>
                   <motion.button whileTap={{ scale: 1.2 }} className="buyBtn">
                     Add To Cart
@@ -103,19 +111,39 @@ export default function Prodactdetails() {
                             <input type="text" placeholder="Enter name" />
                           </div>
                           <div className="formGroup d-flex align-items-center gap-5">
-                            <span>
+                            <span
+                              onClick={() => {
+                                setrate(1);
+                              }}
+                            >
                               1<i class="ri-star-fill"></i>
                             </span>
-                            <span>
+                            <span
+                              onClick={() => {
+                                setrate(2);
+                              }}
+                            >
                               2<i class="ri-star-fill"></i>
                             </span>
-                            <span>
+                            <span
+                              onClick={() => {
+                                setrate(3);
+                              }}
+                            >
                               3<i class="ri-star-fill"></i>
                             </span>
-                            <span>
+                            <span
+                              onClick={() => {
+                                setrate(4);
+                              }}
+                            >
                               4<i class="ri-star-fill"></i>
                             </span>
-                            <span>
+                            <span
+                              onClick={() => {
+                                setrate(5);
+                              }}
+                            >
                               5<i class="ri-star-fill"></i>
                             </span>
                             <span>
@@ -136,6 +164,10 @@ export default function Prodactdetails() {
                   </div>
                 )}
               </div>
+              <div className="col-lg-12 mt-5">
+                <h2 className="relatedTittle">You may also like</h2>
+              </div>
+              <ProductsList data={ratedProdacts} />
             </div>
           </div>
         </section>
