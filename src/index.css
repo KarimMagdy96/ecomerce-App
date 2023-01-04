@@ -211,8 +211,8 @@ h1 {
 .servicesItem span i {
   font-size: 2.2rem;
   background-color: var(--primary-color);
-  padding: 10px;
-  border-radius: 50px;
+  padding: 10p8;
+  border-radius: 8;
   color: white;
   font-weight: 400;
 }
@@ -447,6 +447,19 @@ h1 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 30px;
+}
+/* Cart */
+.table tr td img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover;
+}
+td i {
+  cursor: pointer;
+}
+td,
+th {
+  color: var(--primary-color);
 }
 /* *************** */
 @media only screen and (max-width: 768px) and (min-width: 576px) {

@@ -20,7 +20,7 @@ const CartSlice = createSlice({
         state.CartItem.push({
           id: newItem.id,
           productName: newItem.productName,
-          image: newItem.imgUrl,
+          imgUrl: newItem.imgUrl,
           price: newItem.price,
           quantity: 1,
           totalPrice: newItem.price,
@@ -36,6 +36,9 @@ const CartSlice = createSlice({
       console.log(state.totalQuantity);
       console.log(state.CartItem);
       console.log(newItem);
+    },
+    deleteItems: (state, action) => {
+      const id = action.payload;
     },
   },
 });
