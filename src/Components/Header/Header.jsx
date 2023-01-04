@@ -42,12 +42,14 @@ export default function Header() {
         <div className="container">
           <div className="row">
             <div className="navWraaper">
-              <div className="logo">
-                <img src={logo} alt="logo" />
-                <div className="logoName">
-                  <h1>KMarket</h1>
+              <NavLink to="home">
+                <div className="logo">
+                  <img src={logo} alt="logo" />
+                  <div className="logoName">
+                    <h1>KMarket</h1>
+                  </div>
                 </div>
-              </div>
+              </NavLink>
               {console.log(menuRef)}
               <div className="navigation" ref={menuRef} onClick={menuToggle}>
                 <ul className="menu">

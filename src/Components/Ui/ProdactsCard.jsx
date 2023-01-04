@@ -18,19 +18,26 @@ export default function ProdactsCard({ item }) {
     toast.success("Product Added Successfully");
   };
 
+  const scrolltop = () => {
+    window.scrollTo(0, 300);
+  };
   return (
-    <div className="  col-lg-3  col-md-6 mb-2 ">
+    <div className="  col-lg-3  col-md-6 mb-2">
       <div className="productItem ">
         <div className="productImg overflow-hidden">
-          <motion.img
-            whileHover={{ scale: 1.3 }}
-            src={item.imgUrl}
-            alt="prodact"
-          />
+          <Link to={`/shop/${item.id}`} onClick={scrolltop}>
+            <motion.img
+              whileHover={{ scale: 0.9 }}
+              src={item.imgUrl}
+              alt="product"
+            />
+          </Link>
         </div>
         <div className="p-2 productInfo">
           <h3 className="productName">
-            <Link to={`/shop/${item.id}`}>{item.productName}</Link>
+            <Link to={`/shop/${item.id}`} onClick={scrolltop}>
+              {item.productName}
+            </Link>
           </h3>
           <span className="">{item.category}</span>
         </div>

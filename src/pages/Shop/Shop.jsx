@@ -54,9 +54,9 @@ export default function Shop() {
       <section>
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-3">
-              <div className="filterWidget">
-                <select onChange={handelFilter}>
+            <div className="col-lg-3 col-md-6 mb-3">
+              <span className="filterWidget ">
+                <select onChange={handelFilter} className="w-100">
                   <option disabled selected>
                     Filter By Category
                   </option>
@@ -67,18 +67,18 @@ export default function Shop() {
                   <option value="watch">Watch</option>
                   <option value="wireless">Wireless</option>
                 </select>
-              </div>
+              </span>
             </div>
-            <div className="col-lg-3 col-md-3">
-              <div className="filterWidget">
-                <select>
+            <div className="col-lg-3 col-md-6 text-end  mb-3">
+              <div className="filterWidget ">
+                <select className="w-100">
                   <option value="sofa">Sort By </option>
                   <option value="ascending">Ascending</option>
                   <option value="Descending">Descending</option>
                 </select>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6  ">
+            <div className="col-lg-6 col-md-12  ">
               <div className="searchBox ">
                 <input
                   type="text"

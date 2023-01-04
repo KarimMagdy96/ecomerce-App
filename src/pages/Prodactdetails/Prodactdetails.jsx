@@ -5,10 +5,14 @@ import products from "../../assets/data/products";
 import Helmet from "../../Components/Helmet/Helmet";
 import ProductsList from "../../Components/Ui/ProductsList";
 import CommonSection from "../../Components/Ui/CommonSection";
+import { useDispatch } from "react-redux";
+import { CartAction } from "../../redux/slice/CartSlice";
+import { toast } from "react-toastify";
 export default function Prodactdetails() {
   const [tab, setTab] = useState("desc");
   const reviewUser = useRef("");
   const reviewMsg = useRef("");
+  const dispatch = useDispatch();
   const [rate, setrate] = useState(null);
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
@@ -28,6 +32,17 @@ export default function Prodactdetails() {
     e.preventDefault();
     const reviewUserName = reviewUser.current.value;
     const reviewUserMsg = reviewMsg.current.value;
+  };
+  const addToCart = () => {
+    dispatch(
+      CartAction.addItem({
+        id,
+        Image: imgUrl,
+        productName,
+        price,
+      })
+    );
+    toast.success("Product Added Successfully");
   };
   return (
     <>
@@ -69,7 +84,11 @@ export default function Prodactdetails() {
                     <span>Category: {category}</span>
                   </div>
                   <p className="mt-3">{shortDesc}</p>
-                  <motion.button whileTap={{ scale: 1.2 }} className="buyBtn">
+                  <motion.button
+                    whileTap={{ scale: 1.2 }}
+                    className="buyBtn"
+                    onClick={addToCart}
+                  >
                     Add To Cart
                   </motion.button>
                 </div>
@@ -111,7 +130,7 @@ export default function Prodactdetails() {
                           </li>
                         ))}
                       </ul>
-                      <div className="reviewForm ">
+                      <div className="reviewForm   w-100">
                         <h4>Leave Your Experience</h4>
                         <form action="" onSubmit={submitHandler}>
                           <div className="formGroup">
@@ -121,44 +140,44 @@ export default function Prodactdetails() {
                               ref={reviewUser}
                             />
                           </div>
-                          <div className="formGroup d-flex align-items-center gap-5">
+                          <div className="formGroup d-flex align-items-center gap-1">
                             <span
                               onClick={() => {
                                 setrate(1);
                               }}
                             >
-                              1<i class="ri-star-fill"></i>
+                              (1<i class="ri-star-fill"></i>)
                             </span>
                             <span
                               onClick={() => {
                                 setrate(2);
                               }}
                             >
-                              2<i class="ri-star-fill"></i>
+                              (2<i class="ri-star-fill"></i>)
                             </span>
                             <span
                               onClick={() => {
                                 setrate(3);
                               }}
                             >
-                              3<i class="ri-star-fill"></i>
+                              (3<i class="ri-star-fill"></i>)
                             </span>
                             <span
                               onClick={() => {
                                 setrate(4);
                               }}
                             >
-                              4<i class="ri-star-fill"></i>
+                              (4<i class="ri-star-fill"></i>)
                             </span>
                             <span
                               onClick={() => {
                                 setrate(5);
                               }}
                             >
-                              5<i class="ri-star-fill"></i>
+                              (5<i class="ri-star-fill"></i>)
                             </span>
                             <span>
-                              6<i class="ri-star-fill"></i>
+                              (6<i class="ri-star-fill"></i>)
                             </span>
                           </div>
                           <div className="formGroup">
