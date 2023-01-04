@@ -32,6 +32,13 @@ export default function Prodactdetails() {
     e.preventDefault();
     const reviewUserName = reviewUser.current.value;
     const reviewUserMsg = reviewMsg.current.value;
+    const reviewObj = {
+      userName: reviewUserName,
+      text: reviewUserMsg,
+      rate,
+    };
+    toast.success("Review submitted");
+    console.log(reviewObj);
   };
   const addToCart = () => {
     dispatch(
@@ -141,44 +148,54 @@ export default function Prodactdetails() {
                             />
                           </div>
                           <div className="formGroup d-flex align-items-center gap-1">
-                            <span
+                            <motion.span
+                              whileTap={{ scale: 1.2 }}
                               onClick={() => {
                                 setrate(1);
                               }}
                             >
                               (1<i class="ri-star-fill"></i>)
-                            </span>
-                            <span
+                            </motion.span>
+                            <motion.span
+                              whileTap={{ scale: 1.2 }}
                               onClick={() => {
                                 setrate(2);
                               }}
                             >
                               (2<i class="ri-star-fill"></i>)
-                            </span>
-                            <span
+                            </motion.span>
+                            <motion.span
+                              whileTap={{ scale: 1.2 }}
                               onClick={() => {
                                 setrate(3);
                               }}
                             >
                               (3<i class="ri-star-fill"></i>)
-                            </span>
-                            <span
+                            </motion.span>
+                            <motion.span
+                              whileTap={{ scale: 1.2 }}
                               onClick={() => {
                                 setrate(4);
                               }}
                             >
                               (4<i class="ri-star-fill"></i>)
-                            </span>
-                            <span
+                            </motion.span>
+                            <motion.span
+                              whileTap={{ scale: 1.2 }}
                               onClick={() => {
                                 setrate(5);
                               }}
                             >
                               (5<i class="ri-star-fill"></i>)
-                            </span>
-                            <span>
+                            </motion.span>
+                            <motion.span
+                              whileTap={{ scale: 1.2 }}
+                              onClick={() => {
+                                setrate(6);
+                              }}
+                            >
                               (6<i class="ri-star-fill"></i>)
-                            </span>
+                            </motion.span>
                           </div>
                           <div className="formGroup">
                             <textarea
