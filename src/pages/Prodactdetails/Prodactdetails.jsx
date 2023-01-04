@@ -7,6 +7,8 @@ import ProductsList from "../../Components/Ui/ProductsList";
 import CommonSection from "../../Components/Ui/CommonSection";
 export default function Prodactdetails() {
   const [tab, setTab] = useState("desc");
+  const reviewUser = useRef("");
+  const reviewMsg = useRef("");
   const [rate, setrate] = useState(null);
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
@@ -22,6 +24,11 @@ export default function Prodactdetails() {
     category,
   } = product;
   const ratedProdacts = products.filter((item) => item.category === category);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const reviewUserName = reviewUser.current.value;
+    const reviewUserMsg = reviewMsg.current.value;
+  };
   return (
     <>
       <Helmet title={productName}>
@@ -106,9 +113,13 @@ export default function Prodactdetails() {
                       </ul>
                       <div className="reviewForm ">
                         <h4>Leave Your Experience</h4>
-                        <form action="">
+                        <form action="" onSubmit={submitHandler}>
                           <div className="formGroup">
-                            <input type="text" placeholder="Enter name" />
+                            <input
+                              type="text"
+                              placeholder="Enter name"
+                              ref={reviewUser}
+                            />
                           </div>
                           <div className="formGroup d-flex align-items-center gap-5">
                             <span
@@ -152,6 +163,7 @@ export default function Prodactdetails() {
                           </div>
                           <div className="formGroup">
                             <textarea
+                              ref={reviewMsg}
                               rows="4"
                               type="text"
                               placeholder="Review Massage"
