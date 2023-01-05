@@ -8,7 +8,7 @@ import Login from "./pages/Login/Login";
 import Notfound from "./pages/Notfound/Notfound";
 import Shop from "./pages/Shop/Shop";
 import Prodactdetails from "./pages/Prodactdetails/Prodactdetails";
-import Cheakout from "./pages/Cheakout/Cheakout";
+import Checkout from "./pages/Checkout/Checkout";
 import Signin from "./pages/Signin/Signin";
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="signin" element={<Signin />} />
         <Route path="shop" element={<Shop />} />
         <Route path="shop/:id" element={<Prodactdetails />} />
-        <Route path="cheakout" element={<Cheakout />} />
+        <Route path="Checkout" element={<Checkout />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />

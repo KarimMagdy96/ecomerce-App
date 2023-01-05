@@ -57,7 +57,7 @@ export default function Shop() {
             <div className="col-lg-3 col-md-6 mb-3">
               <span className="filterWidget ">
                 <select onChange={handelFilter} className="w-100">
-                  <option disabled selected>
+                  <option disabled defaultChecked>
                     Filter By Category
                   </option>
                   <option value="">All</option>
