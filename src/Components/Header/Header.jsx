@@ -50,7 +50,7 @@ export default function Header() {
                   </div>
                 </div>
               </NavLink>
-              {console.log(menuRef)}
+
               <div className="navigation" ref={menuRef} onClick={menuToggle}>
                 <ul className="menu">
                   {navLink.map((link, i) => (
