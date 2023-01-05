@@ -13,7 +13,7 @@ export default function Cart() {
   return (
     <Helmet title="Cart">
       <CommonSection title="Shopping Cart" />
-      <div className="section mt-5 vh-100">
+      <div className="section mt-5">
         <div className="container">
           <div className="row">
             <div className="col-lg-9">
@@ -53,7 +53,7 @@ export default function Cart() {
                   <button className="buyBtn w-100 ">Checkout</button>
                 </Link>
                 <Link to="/shop">
-                  <button className="buyBtn w-100 mt-3">
+                  <button className="buyBtn w-100 my-3">
                     <Link to="/shop">Continue Shopping</Link>
                   </button>
                 </Link>

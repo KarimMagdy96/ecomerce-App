@@ -55,7 +55,12 @@ export default function Header() {
                 <ul className="menu">
                   {navLink.map((link, i) => (
                     <li key={i}>
-                      <NavLink to={link.path}>{link.display}</NavLink>
+                      <NavLink
+                        to={link.path}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        {link.display}
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
@@ -66,7 +71,7 @@ export default function Header() {
                   <span className="badge">1</span>
                 </span>
                 <span className="cartIcon">
-                  <NavLink to="cart">
+                  <NavLink to="cart" onClick={() => window.scrollTo(0, 300)}>
                     <i class="ri-shopping-bag-line"></i>
                     <span className="badge">{totalQuantity}</span>
                   </NavLink>
